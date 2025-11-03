@@ -1,0 +1,60 @@
+@use '/src/sass/base/variables.scss' as *;
+
+.header {
+    width: 360px;
+    height: 314px;
+    background: $light-warm;
+    .content-img {
+        width: 131px;
+        height: 152px;
+    }
+    &__adult-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-adv {
+            background: $sand;
+            width: 219px;
+            height: 152px;
+            .describe{
+                margin: 29px 29px 0 29px;
+                font-family: var(--font4);
+                font-weight: 400;
+                font-size: 15px;
+                text-align: center;
+                color: $brown;
+            }
+            .btn_buy {
+                color: $brown;
+                .line {
+                    border: 1px solid $brown;
+                }
+            }
+            
+        }
+    }
+    &__kids-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-adv {
+            background: $brown;
+            width: 219px;
+            height: 152px;
+            .describe {
+                margin: 29px 29px 0 29px;
+                font-weight: 400;
+                font-size: 15px;
+                text-align: center;
+                color: $sand;
+            }
+            .btn_buy {
+                color: $sand;
+                .line {
+                    border: 1px solid $sand;
+                }
+            }
+    
+        }
+    }
+}

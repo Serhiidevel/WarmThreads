@@ -1,0 +1,27 @@
+@use '/src/sass/base/variables.scss' as *;
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid $dark;
+    width: 360px;
+    height: 68px;
+    background: $dark;
+    &__heart-icon {
+        margin-left: 16px;
+        margin-bottom: 4px;
+        width: 27px;
+        height: 27px;
+    }
+    &__title-img {
+        margin-left: 52px;
+    }
+    &__burger-icon {
+        margin-right: 16px;
+        margin-bottom: 4px;
+        width: 27px;
+        height: 27px;
+    }
+
+}

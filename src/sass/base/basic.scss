@@ -1,0 +1,17 @@
+body {
+    font-family: 'Judson', serif;  // для текста
+  }
+  
+  h1, h2, h3 {
+    font-family: 'Itim', cursive;  // для заголовков
+  }
+  
+  .header__nav a {
+    font-family: 'Barlow', sans-serif; // для меню или акцентов
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Itim&family=Judson&display=swap');
+
+  .container {
+    padding: 0 5px;
+  }

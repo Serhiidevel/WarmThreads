@@ -1,0 +1,85 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.portfolio {
+    padding-top: 12px;
+    padding-bottom: 36px;
+    background: $light-warm;
+    &__sweaters-header {
+        font-weight: 300;
+        font-size: 24px;
+        text-transform: uppercase;
+        text-align: center;
+        color: $brown;
+    }
+    &__sweaters-line {
+        border: 1px solid $brown;
+        margin: 7px auto 0 auto;
+        width: 340px;
+        height: 0px;
+    }
+    .swiper-slide {
+        img {
+            display: block;
+            margin: 17px auto 0 auto;
+        }
+        .portfolio__descr {
+            display: flex;
+            padding: 0 73px 0 73px;
+            margin-top: 10px;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    &__dresses {
+        &__dresses-header {
+            font-weight: 300;
+            font-size: 24px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 18px;           
+      height: 18px;
+      display: inline-flex;
+      cursor: pointer;
+      z-index: 10;
+    }
+   
+
+    
+    .swiper-button-next img,
+    .swiper-button-prev img {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+    }
+
+    // .swiper-button-prev {
+    //     transform: translateX(69px); // двигает стрелку внутрь вправо
+    //   }
+      
+    //   .swiper-button-next {
+    //     transform: translateX(-69px); // двигает стрелку внутрь влево
+    //   }
+      
+    .swiper-button-prev,
+    .swiper-button-next {
+    position: absolute;
+    bottom: 10px;
+    }
+
+}
+
+
+.mySwiper {
+    position: relative;
+    min-height: 250px;
+    
+  }
+  
+
+
+
+

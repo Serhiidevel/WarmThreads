@@ -1,0 +1,78 @@
+@use "/src/sass/base/variables.scss" as *;
+
+
+.about {
+    height: auto;
+    background: $light-warm;
+    padding-bottom: 12px;
+    &__title {
+        padding-top: 32px;
+        color: $brown;
+    }
+    &__badge {
+        &-icon {
+            display: block;
+            margin: 0 auto;
+            margin-top: 14px;
+            width: 31px;
+            height: 31px;
+        }
+        &-title {
+            margin-top: 9px;
+            font-family: Itim;
+            font-weight: 400;
+            font-size: 15px;
+            color: $brown;
+            text-align: center;
+        }
+        &-descr {
+            margin: 0 38px;
+            margin-top: 10px;
+            font-family: Itim;
+            font-weight: 400;
+            font-size: 12px;
+            text-align: center;
+            color: $brown;
+        }
+    }
+    &__badge-brown {
+        background: $brown;
+        border: 1px solid $dark;
+        .about__badge-title {
+            color: $light-warm;
+        }
+        .about__badge-descr {
+            color: $light-warm;
+        }
+    }
+    &__discount {
+        margin: 0 auto;
+        border: 1px solid $dark;
+        border-radius: 11px;
+        width: 304px;
+        height: 94px;
+        background: $brown;
+        &-title {
+            margin-top: 22px;
+            font-family: Libre Calson Text;
+            font-weight: 500;
+            font-size: 14px;
+            text-align: center;
+            color: $white;
+        }
+        &-descr {
+            margin-top: 15px;
+            font-family: Libre Calson Text;
+            font-weight: 500;
+            font-size: 10px;
+            text-align: center;
+            color: $white;
+            img {
+                width: 17px;
+                height: 17px;
+                margin-right: 6px;
+
+            }
+        }
+    }
+}

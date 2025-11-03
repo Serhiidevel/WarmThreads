@@ -40,11 +40,22 @@
     }
     .mySwiper {
         position: relative;
-        overflow: visible; // стрелки не обрезаются
+        overflow: hidden; // скрываем неактивные слайды за пределами контейнера
         height: auto; // пусть высота подстраивается под контент
-      
-        .swiper-slide {
+        width: 100%;
+        position: relative;
+        padding-bottom: 40px; // опускаем стрелки ниже без увеличения внешнего отступа
+        .swiper-wrapper {
+          display: flex;
+          .swiper-slide {
+            flex-shrink: 0;
+            width: 100%; // каждый слайд на всю ширину контейнера
+            box-sizing: border-box;
+          }
+        }
+        .swiper-slide  {
           text-align: center;
+          display: block;
       
           img {
             display: block;
@@ -65,8 +76,8 @@
         .swiper-button-prev,
         .swiper-button-next {
           position: absolute;
-          top: 100%; // ставим сразу под слайдом!
-          transform: translateY(10px); // немного ниже, если хочешь отступ
+          top: auto; // держим стрелки внутри контейнера
+          bottom: 0; // у нижней границы слайдера
           width: 28px;
           height: 28px;
           display: flex;
@@ -80,12 +91,12 @@
       
         .swiper-button-prev {
           left: 50%;
-          transform: translate(-80px, 10px); // внутрь и вниз
+          transform: translateX(-80px); // смещение влево от центра
         }
       
         .swiper-button-next {
           right: 50%;
-          transform: translate(80px, 10px); // внутрь и вниз
+          transform: translateX(80px); // смещение вправо от центра
         }
       
         .swiper-button-next::after,
@@ -102,7 +113,7 @@
         }
       }
     &__dresses {
-        margin-top: 70px;
+        margin-top: 30px; // компенсируем дополнительное место под стрелки
     }
     .line {
         margin-top: 74px;

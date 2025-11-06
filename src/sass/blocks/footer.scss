@@ -1,0 +1,42 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.footer {
+    background-color: $dark;
+    &__title {
+        padding-top: 21px;
+        img {
+            display: block;
+            padding-left: 98px;
+        }
+    }
+    &__nav {
+        padding-top: 27px;
+        display: flex;
+        justify-content: space-between;
+        li {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 15px;
+            color: $white;
+            list-style-type: none;
+        }
+    }
+    &__follow {
+        margin-top: 31px;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 15px;
+        text-align: center;
+        color: $white;
+        text-align: center;
+    }
+    &__copyright {
+        margin-top: 37px;
+        padding-bottom: 23px;
+        text-align: center;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 10px;
+        color: $white;
+    }
+}

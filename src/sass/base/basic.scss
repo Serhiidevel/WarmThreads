@@ -1,10 +1,33 @@
+@use '/src/sass/base/variables.scss' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
+    width: 100%;
 }
 
 body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
     font-family: 'Judson', serif;  // для текста
+    background-color: $light-warm; // match section background to prevent white lines
+    min-width: 0; // allow body to shrink below content size if needed
   }
+
+section {
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 100%;
+    position: relative;
+    min-width: 0; // allow sections to shrink
+}
   
   h1, h2, h3 {
     font-family: 'Itim', cursive;  // для заголовков
@@ -18,4 +41,16 @@ body {
 
   .container {
     padding: 0 5px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    overflow: visible; // don't clip container content
+  }
+
+
+  @media screen and (min-width: 768px) {
+    .container {
+      padding: 0 24px;
+    }
   }

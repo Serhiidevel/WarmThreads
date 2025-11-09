@@ -3,6 +3,8 @@
 .portfolio {
     padding-top: 12px;
     background: $light-warm;
+    overflow: visible; // don't clip content
+    width: 100%;
     &__sweaters-header , .portfolio__dresses-header {
         font-weight: 300;
         font-size: 24px;
@@ -14,6 +16,7 @@
         border: 1px solid $brown;
         margin: 7px auto 0 auto;
         width: 340px;
+        max-width: calc(100% - 20px); // responsive width
         height: 0px;
     }
     .swiper-slide {
@@ -27,6 +30,8 @@
             margin-top: 10px;
             justify-content: space-between;
             align-items: center;
+            max-width: 100%;
+            box-sizing: border-box;
         }
     }
     &__dresses {
@@ -68,6 +73,8 @@
             align-items: center;
             margin-top: 10px;
             padding: 0 73px;
+            max-width: 100%;
+            box-sizing: border-box;
           }
         }
       

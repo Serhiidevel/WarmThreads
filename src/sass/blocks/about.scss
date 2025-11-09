@@ -4,7 +4,11 @@
 .about {
     height: auto;
     background: $light-warm;
-    padding-bottom: 12px;
+    margin: 0;
+    padding: 0 0 12px 0;
+    width: 100%;
+    display: block;
+    position: relative;
     &__title {
         padding-top: 32px;
         color: $brown;

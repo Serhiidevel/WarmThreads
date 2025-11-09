@@ -1,21 +1,50 @@
 @use '/src/sass/base/variables.scss' as *;
 
 .header {
-    width: 360px;
+    width: 100%;
     height: 314px;
+    min-height: 314px; // ensure minimum height
     background: $light-warm;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: visible; // don't clip content
+    
+    .container {
+        padding: 0 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+    }
     .content-img {
         width: 131px;
         height: 152px;
+        max-width: 100%;
+        object-fit: cover;
+        flex-shrink: 0;
+        display: block;
+        margin: 0;
+        padding: 0;
     }
     &__adult-content {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        justify-content: flex-start;
+        align-items: stretch;
+        flex-wrap: nowrap;
+        gap: 0;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        box-sizing: border-box;
         &-adv {
             background: $sand;
-            width: 219px;
+            flex: 1;
+            min-width: 0;
             height: 152px;
+            margin: 0;
+            padding: 0;
             .describe{
                 margin: 29px 29px 0 29px;
                 font-family: var(--font4);
@@ -35,12 +64,21 @@
     }
     &__kids-content {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        justify-content: flex-start;
+        align-items: stretch;
+        flex-wrap: nowrap;
+        gap: 0;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        box-sizing: border-box;
         &-adv {
             background: $brown;
-            width: 219px;
+            flex: 1;
+            min-width: 0;
             height: 152px;
+            margin: 0;
+            padding: 0;
             .describe {
                 margin: 29px 29px 0 29px;
                 font-weight: 400;
@@ -55,6 +93,99 @@
                 }
             }
     
+        }
+    }
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .header {
+        height: auto;
+        min-height: 480px;
+        padding: 0;
+        .container {
+            gap: 0;
+            padding: 0 24px;
+        }
+        .content-img {
+            width: 291px;
+            height: 226px;
+        }
+        &__adult-content {
+            gap: 0;
+            padding: 0;
+            &-adv {
+                flex: 1;
+                height: 226px;
+                display: flex;
+                flex-direction: column;
+                margin: 0;
+                padding: 0;
+                .describe {
+                    font-family: var(--font4);
+                    font-weight: 400;
+                    font-size: 32px;
+                    text-align: center;
+                    color: $brown;
+                    padding: 0 42px 0 42px;
+                }
+                .btn_buy {
+                    font-family: var(--font4);
+                    font-weight: 400;
+                    font-size: 24px;
+                    color: $brown;
+                    margin: 40px 0 0 0;
+                    padding: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    
+                    .line {
+                        border: 1px solid $brown;
+                        width: 118px;
+                        height: 0px;
+                    }
+                }
+            }
+        }
+        &__kids-content {
+            gap: 0;
+            padding: 0;
+            &-adv {
+                flex: 1;
+                height: 226px;
+                display: flex;
+                flex-direction: column;
+                margin: 0;
+                padding: 0;
+                .describe {
+                    font-family: var(--font4);
+                    font-weight: 400;
+                    font-size: 32px;
+                    text-align: center;
+                    padding: 0 42px 0 42px;
+                    color: $sand;
+                }
+                .btn_buy {
+                    display: block;
+                    font-family: var(--font4);
+                    font-weight: 400;
+                    font-size: 24px;
+                    color: $dark;
+                    margin: 40px 0 0 0;
+                    padding: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    color: $sand;
+                    .line {
+                        border: 1px solid $sand;
+                        width: 118px;
+                        height: 0px;
+                    }
+                }
+            }
         }
     }
 }

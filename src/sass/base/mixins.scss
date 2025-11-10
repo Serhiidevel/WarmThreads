@@ -27,7 +27,7 @@ h1 {
 }
 
 
-.about__badge {
+.about__pack-badge {
     margin: 32px auto;
     border: 1px solid $brown;
     border-radius: 39px;
@@ -35,3 +35,11 @@ h1 {
     height: 139px;
     background: $sand;
 }
+
+@media screen and (min-width: 768px) {
+    .about__pack-badge {
+        width: 217px;
+        height: 178px;
+    }
+}
+

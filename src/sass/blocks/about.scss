@@ -13,39 +13,41 @@
         padding-top: 32px;
         color: $brown;
     }
-    &__badge {
-        &-icon {
-            display: block;
-            margin: 0 auto;
-            margin-top: 14px;
-            width: 31px;
-            height: 31px;
-        }
-        &-title {
-            margin-top: 9px;
-            font-family: Itim;
-            font-weight: 400;
-            font-size: 15px;
-            color: $brown;
-            text-align: center;
-        }
-        &-descr {
-            margin: 0 38px;
-            margin-top: 10px;
-            font-family: Itim;
-            font-weight: 400;
-            font-size: 12px;
-            text-align: center;
-            color: $brown;
+    &__pack {
+        &-badge {
+            &-icon {
+                display: block;
+                margin: 0 auto;
+                margin-top: 14px;
+                width: 31px;
+                height: 31px;
+            }
+            &-title {
+                margin-top: 9px;
+                font-family: Itim;
+                font-weight: 400;
+                font-size: 15px;
+                color: $brown;
+                text-align: center;
+            }
+            &-descr {
+                margin: 0 38px;
+                margin-top: 10px;
+                font-family: Itim;
+                font-weight: 400;
+                font-size: 12px;
+                text-align: center;
+                color: $brown;
+            }
         }
     }
-    &__badge-brown {
+    &__pack-badge-brown {
         background: $brown;
         border: 1px solid $dark;
-        .about__badge-title {
+        .about__pack-badge-title {
             color: $light-warm;
         }
-        .about__badge-descr {
+        .about__pack-badge-descr {
             color: $light-warm;
         }
     }
@@ -80,3 +82,56 @@
         }
     }
 }
+
+@media screen and (min-width: 768px) {
+    .about {
+        &__title {
+            font-size: 48px;
+        }
+        &__pack {
+            display: flex;
+            &-badge {
+                    &-icon {
+                        margin-top: 19px;
+                        width: 35px;
+                        height: 35px;
+                    }
+                    &-title {
+                        margin-top: 16px;
+                        font-size: 20px;
+                    }
+                    &-descr {
+                        margin: 0;
+                        margin-top: 12px;
+
+                    }
+                }
+            }
+            &__discount {
+                margin-top: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 562px;
+                height: 150px;
+                &-title {
+                    margin-left: 31px;
+                    margin-bottom: 30px;
+                    font-size: 24px;
+                }
+                &-descr {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-evenly;
+                    margin: 28px 80px 30px 19px;
+                    font-size: 16px;
+                    img {
+                        padding-right: 0;
+                        width: 36px;
+                        height: 33px;
+                        padding-bottom: 4px;
+                    }
+                }
+            }
+        }
+    }

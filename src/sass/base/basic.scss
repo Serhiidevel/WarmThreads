@@ -54,3 +54,11 @@ section {
       padding: 0 24px;
     }
   }
+
+
+
+  @media screen and (min-width: 1440px) {
+    .container {
+      padding: 0 50px;
+    }
+  }

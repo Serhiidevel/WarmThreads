@@ -135,3 +135,52 @@
             }
         }
     }
+
+
+
+
+@media screen and (min-width: 1440px) {
+    .about {
+        &__title {
+            font-size: 75px;
+            padding-top: 0;
+        }
+        &__pack {
+            &-badge {
+                width: 301px;
+                height: 265px;
+                &-icon {
+                    width: 45px;
+                    height: 54px;
+                }
+                &-title {
+                    font-size: 28px;
+                    margin-top: 20px;
+                }
+                &-descr {
+                    margin-top: 20px;
+                    font-size: 20px;
+                    padding: 0 16px;
+                }
+            }
+        }
+        &__discount {
+            width: 1113px;
+            height: 276px;
+            margin-top: 86px;
+            &-title {
+                font-weight: 400;
+                font-size: 64px;
+                padding: 0 80px;
+            }
+            &-descr {
+                font-size: 28px;
+                margin: 28px 80px 30px 19px;
+                img {
+                    width: 73px;
+                    height: 65px;
+                }
+            }
+        }
+    }
+    }

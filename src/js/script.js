@@ -22,4 +22,10 @@ const swiper = new Swiper('.mySwiper', {
     prevEl: '.swiper-button-prev',
   },
   a11y: false,
+  breakpoints: {
+    // Отключаем swiper на экранах 1440px и больше
+    1440: {
+      enabled: false,
+    },
+  },
 });

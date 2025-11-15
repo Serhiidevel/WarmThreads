@@ -16,7 +16,7 @@
         border: 1px solid $brown;
         margin: 7px auto 0 auto;
         width: 340px;
-        max-width: calc(100% - 20px); // responsive width
+        max-width: calc(100% - 20px); 
         height: 0px;
     }
     .swiper-slide {
@@ -44,16 +44,16 @@
     }
     .mySwiper {
         position: relative;
-        overflow: hidden; // скрываем неактивные слайды за пределами контейнера
-        height: auto; // пусть высота подстраивается под контент
+        overflow: hidden; 
+        height: auto; 
         width: 100%;
         position: relative;
-        padding-bottom: 40px; // опускаем стрелки ниже без увеличения внешнего отступа
+        padding-bottom: 40px; 
         .swiper-wrapper {
           display: flex;
           .swiper-slide {
             flex-shrink: 0;
-            width: 100%; // каждый слайд на всю ширину контейнера
+            width: 100%; 
             box-sizing: border-box;
           }
         }
@@ -82,8 +82,8 @@
         .swiper-button-prev,
         .swiper-button-next {
           position: absolute;
-          top: auto; // держим стрелки внутри контейнера
-          bottom: 0; // у нижней границы слайдера
+          top: auto; 
+          bottom: 0; 
           width: 28px;
           height: 28px;
           display: flex;
@@ -97,12 +97,12 @@
       
         .swiper-button-prev {
           left: 50%;
-          transform: translateX(-80px); // смещение влево от центра
+          transform: translateX(-80px);
         }
       
         .swiper-button-next {
           right: 50%;
-          transform: translateX(80px); // смещение вправо от центра
+          transform: translateX(80px); 
         }
       
         .swiper-button-next::after,
@@ -119,7 +119,7 @@
         }
       }
     &__dresses {
-        margin-top: 30px; // компенсируем дополнительное место под стрелки
+        margin-top: 30px;
     }
     .line {
         margin-top: 74px;
@@ -168,6 +168,54 @@
 
   
 
-
-
-
+  @media screen and (min-width: 1440px) {
+    .portfolio {
+      &__sweaters-header , .portfolio__dresses-header {
+        padding-left: 48px;
+        font-weight: 400;
+      }
+      &__sweaters-line , .portfolio__dresses-line {
+        width: 1260px;
+      }
+      .mySwiper {
+        overflow: visible;
+        
+        .swiper-wrapper {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          transform: none !important;
+        }
+        
+        .swiper-slide {
+          width: 100% !important;
+          transform: none !important;
+          img {
+            width: 290px;
+            height: 305px;
+          }
+          .portfolio__descr {
+            font-size: 24px;
+            margin-left: -50px;
+            justify-content: space-between;
+            .portfolio_price {
+              span {
+                margin-right: -190px;
+                margin-left: -31px;
+              }
+            }
+          }
+        }
+        
+        .swiper-button-prev,
+        .swiper-button-next {
+          display: none !important;
+        }
+      }
+      &__dresses {
+        margin-top: 90px;
+      }
+      .line {
+        margin-top: 74px;
+    }
+    }
+  }

@@ -87,6 +87,7 @@
     .about {
         &__title {
             font-size: 48px;
+            padding-top: 0;
         }
         &__pack {
             display: flex;
@@ -117,7 +118,7 @@
                 &-title {
                     margin-left: 31px;
                     margin-bottom: 30px;
-                    font-size: 24px;
+                    font-size: 25px;
                 }
                 &-descr {
                     display: flex;

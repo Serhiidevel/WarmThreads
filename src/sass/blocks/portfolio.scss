@@ -8,6 +8,7 @@
     &__sweaters-header , .portfolio__dresses-header {
         font-weight: 300;
         font-size: 24px;
+        font-family: "Itim", cursive;
         text-transform: uppercase;
         text-align: center;
         color: $brown;
@@ -15,6 +16,7 @@
     &__sweaters-line, .portfolio__dresses-line{
         border: 1px solid $brown;
         margin: 7px auto 0 auto;
+        font-family: "Itim", cursive;
         width: 340px;
         max-width: calc(100% - 20px); 
         height: 0px;

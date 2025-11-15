@@ -100,3 +100,41 @@
         }
     }
 }
+
+@media screen and (min-width: 1440px) {
+    .footer {
+        &__title {
+            padding-top: 32px;
+            img {
+                width: 330px;
+                height: 55px;
+            }
+        }
+        &__nav {
+            margin-top: -13px;
+            margin-left: 500px;
+            li {
+                margin: 0 55px 0 55px;
+                font-size: 28px;
+                .li {
+                    font-size: 20px;
+                }
+            }
+        }
+        &__follow {
+            margin-left: 70px;
+            &-us {
+                span {
+                    font-size: 28px;
+                }
+            }
+            img {
+                margin-right: 24px;
+                margin-left: 9px;
+            }
+        }
+        &__copyright {
+            font-size: 22px;
+        }
+    }
+}

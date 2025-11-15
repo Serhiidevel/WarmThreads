@@ -66,3 +66,36 @@
         }
     }
 }
+
+
+
+@media screen and (min-width: 1440px) {
+    .contacts {
+        margin-top: 68px;
+        &__title {
+            padding-top: 0;
+            font-size: 58px;
+            img {
+                width: 46px;
+                height: 46px;
+            }
+        }
+        &__descr {
+            max-width: 60px 86px 0 86px;
+            font-size: 40px;
+        }
+        &__service {
+            margin-top: 60px;
+            &-online {
+                font-size: 34px;
+            }
+            &-number {
+                font-size: 36px;
+                img {
+                    width: 29px;
+                    height: 29px;
+                }
+            }
+        }
+    }
+}

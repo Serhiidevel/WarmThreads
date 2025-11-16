@@ -221,3 +221,15 @@
     }
     }
   }
+
+
+  @media screen and (min-width: 1920px) {
+    .portfolio {
+      &__sweaters-header , .portfolio__dresses-header {
+        font-size: 50px;
+      }
+      &__sweaters-line , .portfolio__dresses-line {
+        width: 1736px;
+      }
+    }
+  }

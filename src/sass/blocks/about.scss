@@ -186,3 +186,34 @@
         }
     }
     }
+
+
+    @media screen and (min-width: 1920px) {
+        .about {
+            &__title {
+                font-size: 80px;
+            }
+            &__pack {
+                margin: 0;
+                justify-content: space-evenly;
+                &-badge {
+                    margin: 0;
+                    width: 448px;
+                    height: 320px;
+                    &-title {
+                        font-size: 38px;
+                    }
+                    &-descr {
+                        font-size: 28px;
+                        padding: 0 35px;
+                    }
+                }
+            }
+            &__discount {
+                width: 1323px;
+                &-descr {
+                    font-size: 32px;
+                }
+            }
+        }
+    }

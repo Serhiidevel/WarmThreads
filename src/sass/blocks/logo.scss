@@ -47,6 +47,22 @@
 }
 
 
-// @media screen and (min-width: 1440px) {
-
-// }
+@media screen and (min-width: 1920px) {
+    .logo {
+        height: 163px;
+        &__heart-icon {
+            margin-left: 50px;
+            width: 68px;
+            height: 64px;
+        }
+        &__title-img {
+            width: 471px;
+            height: 71px;
+        }
+        &__burger-icon {
+            margin-right: 50px;
+            width: 68px;
+            height: 64px;
+        }
+    }
+}

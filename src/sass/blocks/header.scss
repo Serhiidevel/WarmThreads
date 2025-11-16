@@ -184,3 +184,24 @@
         }
     }
 }
+
+@media screen and (min-width: 1920px) {
+    .header {
+        &__promo {
+            gap: 40px;
+            &-title {
+                font-size: 60px;
+                
+            }
+            .btn_buy {
+                font-size: 45px;
+                .line {
+                    width: 229px;
+                }
+                span {
+                    letter-spacing: 0;
+                }
+            }
+        }
+    }
+}

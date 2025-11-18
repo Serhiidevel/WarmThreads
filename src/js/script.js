@@ -15,7 +15,7 @@ const swiper = new Swiper('.mySwiper', {
   modules: [Navigation], // подключаем стрелки
   loop: true,
   slidesPerView: 1,
-  spaceBetween: 20,
+  spaceBetween: 5,
   speed: 500,
   navigation: {
     nextEl: '.swiper-button-next',

@@ -22,18 +22,26 @@
         height: 0px;
     }
     .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         img {
             display: block;
+            width: 100%;
+            max-width: 368px;
             margin: 17px auto 0 auto;
+            height: auto;
         }
         .portfolio__descr {
             display: flex;
-            padding: 0 73px 0 73px;
+            width: 100%;
             margin-top: 10px;
+            padding: 12px 16px;
             justify-content: space-between;
             align-items: center;
-            max-width: 100%;
             box-sizing: border-box;
+            gap: 12px;
+            background: $light-warm;
         }
     }
     &__dresses {
@@ -60,24 +68,8 @@
           }
         }
         .swiper-slide  {
-          text-align: center;
-          display: block;
-      
-          img {
-            display: block;
-            margin: 17px auto 0 auto;
-            max-width: 100%;
-          }
-      
-          .portfolio__descr {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 10px;
-            padding: 0 73px;
-            max-width: 100%;
-            box-sizing: border-box;
-          }
+          width: 100%;
+          text-align: left;
         }
       
         // стрелки
@@ -126,6 +118,15 @@
     .line {
         margin-top: 37px;
     }
+    .portfolio_name {
+        flex: 1;
+        text-align: left;
+    }
+    .portfolio_price {
+        margin-left: auto;
+        white-space: nowrap;
+        text-align: right;
+    }
 }
 
 
@@ -140,20 +141,21 @@
     &__sweaters-line, .portfolio__dresses-line{ 
         margin-top: 0;
         margin-top: 14px;
-        width: 669px;
+        width: 570px;
       }
     .mySwiper {
         margin-top: 0;
         margin-top: 26px;
         .swiper-slide {
           img {
-            width: 462px;
+            width: 100%;
+            max-width: 462px;
             height: 377px;
           }
           .portfolio__descr {
             margin-top: 12px;
             font-size: 32px;
-            justify-content: space-evenly;
+            gap: 20px;
           }
         
         }
@@ -170,26 +172,28 @@
 
   
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1441px) {
     .portfolio {
       &__sweaters-header , .portfolio__dresses-header {
         padding-left: 48px;
         font-weight: 400;
       }
       &__sweaters-line , .portfolio__dresses-line {
-        width: 1260px;
+        width: 1974px;
       }
       .mySwiper {
         overflow: visible;
         
         .swiper-wrapper {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          grid-template-columns: repeat(auto-fit, minmax(290px, auto));
+          gap: 5px;
+          justify-content: center;
           transform: none !important;
         }
         
         .swiper-slide {
-          width: 100% !important;
+          width: auto !important;
           transform: none !important;
           img {
             width: 290px;
@@ -197,14 +201,7 @@
           }
           .portfolio__descr {
             font-size: 24px;
-            margin-left: -50px;
-            justify-content: space-between;
-            .portfolio_price {
-              span {
-                margin-right: -190px;
-                margin-left: -31px;
-              }
-            }
+            margin-left: 0;
           }
         }
         
@@ -226,10 +223,31 @@
   @media screen and (min-width: 1920px) {
     .portfolio {
       &__sweaters-header , .portfolio__dresses-header {
-        font-size: 50px;
+        font-size: 66px;
+        padding-left: 224px;
       }
       &__sweaters-line , .portfolio__dresses-line {
-        width: 1736px;
+        width: 2310px;
+        max-width: calc(100% - 140px); // Предотвращает выход за границы контейнера
+      }
+      .mySwiper {
+        margin-top: 0;
+        margin-top: 26px;
+        .swiper-wrapper {
+          gap: 132px;
+          .swiper-slide {
+            img {
+              width: 461px;
+              height: 488px;
+            }
+            .portfolio__descr {
+              margin-top: 12px;
+              font-size: 32px;
+              gap: 20px;
+            }
+          
+          }  
+        }      
       }
     }
   }

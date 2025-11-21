@@ -185,35 +185,35 @@
             }
         }
     }
-    }
+}
 
 
-    @media screen and (min-width: 1920px) {
-        .about {
-            &__title {
-                font-size: 112px;
-            }
-            &__pack {
+@media screen and (min-width: 1920px) {
+    .about {
+        &__title {
+            font-size: 112px;
+        }
+        &__pack {
+            margin: 0;
+            justify-content: space-evenly;
+            &-badge {
                 margin: 0;
-                justify-content: space-evenly;
-                &-badge {
-                    margin: 0;
-                    width: 608px;
-                    height: 354px;
-                    &-title {
-                        font-size: 42px;
-                    }
-                    &-descr {
-                        font-size: 35px;
-                        padding: 0 50px;
-                    }
+                width: 608px;
+                height: 354px;
+                &-title {
+                    font-size: 42px;
                 }
-            }
-            &__discount {
-                width: 1323px;
                 &-descr {
-                    font-size: 32px;
+                    font-size: 35px;
+                    padding: 0 50px;
                 }
             }
         }
+        &__discount {
+            width: 1323px;
+            &-descr {
+                font-size: 32px;
+            }
+        }
     }
+}

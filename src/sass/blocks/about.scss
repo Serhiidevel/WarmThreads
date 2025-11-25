@@ -144,8 +144,8 @@
 @media screen and (min-width: 1440px) {
     .about {
         &__title {
-            font-size: 75px;
-            padding-top: 0;
+            font-size: 58px;
+            padding-top: 35px;
         }
         &__pack {
             &-badge {
@@ -192,19 +192,20 @@
     .about {
         &__title {
             font-size: 80px;
+            margin-top: 30px;
         }
         &__pack {
             margin: 0;
             justify-content: space-evenly;
             &-badge {
-                margin: 0;
-                width: 480px;
-                height: 386px;
+                margin-top: 50px;
+                width: 465px;
+                height: 331px;
                 &-title {
                     font-size: 42px;
                 }
                 &-descr {
-                    font-size: 32px;
+                    font-size: 27px;
                     padding: 0 50px;
                 }
             }

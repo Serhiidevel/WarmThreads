@@ -47,9 +47,27 @@
 }
 
 
+@media screen and (min-width: 1440px) {
+    .logo {
+        display: block;
+        position: relative;
+        &__heart-icon {
+            position: absolute;
+            top: 12px;
+        }
+        &__title-img {           
+            margin-top: 9px;
+        }
+        &__burger-icon {
+            display: none;
+        }
+    }
+}
+
+
 @media screen and (min-width: 1920px) {
     .logo {
-        height: 130px;
+        height: 98px;
         &__heart-icon {
             margin-left: 50px;
             width: 68px;
@@ -58,11 +76,6 @@
         &__title-img {
             width: 471px;
             height: 71px;
-        }
-        &__burger-icon {
-            margin-right: 50px;
-            width: 68px;
-            height: 64px;
         }
     }
 }

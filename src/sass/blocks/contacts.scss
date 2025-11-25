@@ -99,3 +99,12 @@
         }
     }
 }
+
+@media screen and (min-width: 1920px) {
+    .contacts {
+        &__descr {
+           margin-right: 300px;
+           margin-left: 300px;
+        }
+}
+}

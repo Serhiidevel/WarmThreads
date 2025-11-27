@@ -29,3 +29,17 @@ const swiper = new Swiper('.mySwiper', {
     },
   },
 });
+
+
+
+const burger = document.getElementById('burger');
+const navLinks = document.getElementById('nav-links');
+const closeBtn = document.getElementById('close-btn');
+
+burger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  burger.classList.toggle('active');
+  closeBtn.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+  });
+});

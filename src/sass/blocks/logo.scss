@@ -21,11 +21,75 @@
         display: block;
     }
     &__burger-icon {
-        margin-right: 16px;
+        margin-right: -16px;
         margin-bottom: 4px;
         width: 27px;
         height: 27px;
     }
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 36px;
+        z-index: 3;
+        li {
+            span {
+                width: 100%;
+                padding-left: 25px;
+            }
+        }
+      }
+      .nav-links li a {
+        padding-top: 40px;
+        color: $dark;
+        text-decoration: none;
+        font-size: 24px;
+        font-family: barlow;
+        font-weight: 400;
+      }
+      .nav-links {
+        position: fixed;
+        right: 0;
+        top: 0;
+        background: $light-warm;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        transform: translateX(100%);
+        border-bottom: 2px solid $dark;
+        border-top: 2px solid $dark;
+        transition: transform 0.4s ease-in-out;
+        padding-top: 95px;
+        padding-left: 40px;
+        padding-bottom: 40px;
+      }
+    
+      .nav-links.active {
+        transform: translateX(0);
+      }
+    
+      .burger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+      }
+    
+      .burger span {
+        width: 25px;
+        height: 3px;
+        background: white;
+        margin: 4px 0;
+        border-radius: 2px;
+      }
+      .close-btn {
+        position: absolute;
+        top: 18px;
+        right: 298px;
+        font-size: 28px;
+        background: none;
+        border: none;
+        color: $dark;
+        cursor: pointer;
+      }
 
 }
 
@@ -42,9 +106,28 @@
         &__burger-icon {
             width: 43px;
             height: 40px;
+            margin-right: -165px;
         }
+        .close-btn { 
+            top: 11px;
+            right: 240px;
+            font-size: 40px;
     }
+    .nav-links {
+        width: 39%;
+        border-top: none;
+        border-left: 2px solid $dark;
+        img {
+            width: 39px;
+            height: 36px;
+        }
+        span {
+            font-size: 27px;
+        }
+        }
 }
+}
+
 
 
 @media screen and (min-width: 1440px) {
@@ -61,6 +144,9 @@
         &__burger-icon {
             display: none;
         }
+        .close-btn {
+              display: none;
+            }
     }
 }
 

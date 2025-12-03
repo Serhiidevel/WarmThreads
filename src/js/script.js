@@ -43,3 +43,19 @@ burger.addEventListener('click', () => {
     navLinks.classList.remove('active');
   });
 });
+
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("active");
+      observer.unobserve(entry.target); // чтобы анимация срабатывала один раз
+    }
+  });
+}, {
+  threshold: 0.15 // 15% блока видно — активируем
+});
+
+// Подключаем элементы
+document.querySelectorAll(".reveal, .fade-up, .slide-left, .fade-scale")
+  .forEach(el => observer.observe(el));

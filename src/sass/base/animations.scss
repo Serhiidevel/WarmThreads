@@ -1,0 +1,77 @@
+@media screen and (min-width: 368px) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: 0.45s ease-out;
+  }
+
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
+  .pressable {
+    transition: transform 0.15s ease;
+  }
+  .pressable:active {
+    transform: scale(0.96);
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .fade-up {
+    opacity: 0;
+  }
+  .fade-up.active {
+    animation: fadeUp .6s ease-out forwards;
+  }
+
+  @keyframes slideLeft {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  .slide-left {
+    opacity: 0;
+  }
+  .slide-left.active {
+    animation: slideLeft .6s ease-out forwards;
+  }
+
+  @keyframes fadeScale {
+    from {
+      opacity: 0;
+      transform: scale(0.94);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  .fade-scale {
+    opacity: 0;
+  }
+  .fade-scale.active {
+    animation: fadeScale .5s ease-out forwards;
+  }
+}
+
+
+
+@media screen and (min-width: 768px) {
+    
+}

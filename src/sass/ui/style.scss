@@ -1,14 +1,14 @@
-@use '/src/sass/ui/pxtorem.scss';
+@use 'pxtorem';
 
-@use '/src/sass/base/basic.scss';
-@use '/src/sass/base/mixins.scss';
-@use '/src/sass/base/variables.scss';
-@use '/src/sass/base/animations.scss';
+@use '../base/basic.scss';
+@use '../base/mixins.scss';
+@use '../base/variables.scss';
+@use '../base/animations.scss';
 
 
-@use '/src/sass/blocks/logo.scss';   
-@use '/src/sass/blocks/header.scss';
-@use '/src/sass/blocks/about.scss';
-@use '/src/sass/blocks/portfolio.scss';
-@use '/src/sass/blocks/contacts.scss';
-@use '/src/sass/blocks/footer.scss';
+@use '../blocks/logo.scss';   
+@use '../blocks/header.scss';
+@use '../blocks/about.scss';
+@use '../blocks/portfolio.scss';
+@use '../blocks/contacts.scss';
+@use '../blocks/footer.scss';

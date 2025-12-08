@@ -1,4 +1,4 @@
-@use "/src/sass/base/variables.scss" as *;
+@use "../base/variables.scss" as *;
 
 .contacts {
     padding-bottom: 32px;
@@ -81,7 +81,7 @@
             }
         }
         &__descr {
-            max-width: 60px 86px 0 86px;
+            margin: 60px 86px 0 86px;
             font-size: 40px;
         }
         &__service {

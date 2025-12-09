@@ -1,21 +1,22 @@
-// Plain JS version for GitHub Pages (no bundler required)
 document.addEventListener('DOMContentLoaded', () => {
-  // Swiper (expects Swiper from CDN script)
-  const swiper = new Swiper('.mySwiper', {
-    modules: [Swiper.Navigation],
-    loop: true,
-    slidesPerView: 1,
-    spaceBetween: 5,
-    speed: 500,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    a11y: false,
-    breakpoints: {
-      1440: { enabled: false },
-    },
-  });
+  if (window.Swiper) {
+    new Swiper('.mySwiper', {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 5,
+      speed: 500,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      a11y: false,
+      breakpoints: {
+        1440: { enabled: false },
+      },
+    });
+  } else {
+    console.warn('Swiper not found on window. Check CDN script loading.');
+  }
 
   // Burger menu
   const burger = document.getElementById('burger');

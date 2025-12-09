@@ -10,24 +10,9 @@
     <link rel="stylesheet" href="./src/sass/ui/style.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./src/js/script.js" defer></script>
-    <script>
-      document.addEventListener("scroll", () => {
-        document.querySelectorAll('.reveal').forEach(el => {
-          if (el.getBoundingClientRect().top < window.innerHeight - 60) {
-            el.classList.add("active");
-            
-          }
-        });
-      });
-      </script>
-      <script>
-        document.querySelectorAll('.fade-img').forEach(img => {
-          img.onload = () => img.classList.add('loaded');
-        });
-        </script>
 </head>
 <body>
-    <section class="logo">
+    <section class="logo" id="home">
         <a href="#about"><img src="./src/icon/logo/heart.svg" alt="img_heart" class="logo__heart-icon"></a>
         <h1 class="logo__title">
             <img src="./src/icon/logo/Component 1.svg" alt="img_logo" class="logo__title-img">
@@ -37,11 +22,11 @@
       <nav>
         <ul class="nav-links" id="nav-links">
           <button class="close-btn" id="close-btn">✕</button>
-          <li><a href="#"><img src="./src/icon/burger/House.svg" alt=""><span>Home</span></a></li>
-          <li><a href="#"><img src="./src/icon/burger/tool.svg" alt=""><span>Shop</span></a></li>
-          <li><a href="#"><img src="./src/icon/burger/heart.svg" alt=""><span>About</span></a></li>
-          <li><a href="#"><img src="./src/icon/burger/gift.svg" alt=""><span>Offers</span></a></li>
-          <li><a href="#"><img src="./src/icon/burger/call.svg" alt=""><span>Find Us</span></a></li>
+          <li><a href="#home"><img src="./src/icon/burger/House.svg" alt=""><span>Home</span></a></li>
+          <li><a href="#portfolio"><img src="./src/icon/burger/tool.svg" alt=""><span>Shop</span></a></li>
+          <li><a href="#about"><img src="./src/icon/burger/heart.svg" alt=""><span>About</span></a></li>
+          <li><a href="#offers"><img src="./src/icon/burger/gift.svg" alt=""><span>Offers</span></a></li>
+          <li><a href="#contacts"><img src="./src/icon/burger/call.svg" alt=""><span>Find Us</span></a></li>
         </ul>
       </nav>
     </section>
@@ -108,7 +93,7 @@
             </div>
 
 
-            <div class="about__discount reveal fade-up-xl">
+            <div class="about__discount reveal fade-up-xl" id="offers">
                 <div class="about__discount-title reveal fade-up">Your first purchase — 25% OFF!</div>
                 <div class="about__discount-descr reveal fade-up"><img src="./src/icon/about/shopping-cart.svg" alt="shopping-cart " class="shop">Use code: WELCOME25</div>
             </div>

@@ -63,6 +63,17 @@ function initApp() {
   document
     .querySelectorAll('.reveal, .fade-up, .slide-left, .fade-scale')
     .forEach(el => observer.observe(el));
+
+  // Fade-in images on load
+  document.querySelectorAll('.fade-img').forEach(img => {
+    if (img.complete) {
+      // Image already loaded
+      img.classList.add('loaded');
+    } else {
+      // Wait for image to load
+      img.onload = () => img.classList.add('loaded');
+    }
+  });
 }
 
 // Start initialization when DOM is ready

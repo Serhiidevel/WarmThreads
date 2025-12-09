@@ -1,22 +1,35 @@
-document.addEventListener('DOMContentLoaded', () => {
-  if (window.Swiper) {
-    new Swiper('.mySwiper', {
+// Wait for both DOM and Swiper to be ready
+function initApp() {
+  if (!window.Swiper) {
+    // Swiper not loaded yet, wait a bit more
+    setTimeout(initApp, 50);
+    return;
+  }
+
+  // Initialize Swiper for each instance
+  const swiperElements = document.querySelectorAll('.mySwiper');
+  swiperElements.forEach(swiperEl => {
+    // Find navigation buttons within this swiper's parent container
+    const nextBtn = swiperEl.parentElement?.querySelector('.swiper-button-next') || 
+                     swiperEl.querySelector('.swiper-button-next');
+    const prevBtn = swiperEl.parentElement?.querySelector('.swiper-button-prev') || 
+                     swiperEl.querySelector('.swiper-button-prev');
+    
+    new Swiper(swiperEl, {
       loop: true,
       slidesPerView: 1,
       spaceBetween: 5,
       speed: 500,
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: nextBtn,
+        prevEl: prevBtn,
       },
       a11y: false,
       breakpoints: {
         1440: { enabled: false },
       },
     });
-  } else {
-    console.warn('Swiper not found on window. Check CDN script loading.');
-  }
+  });
 
   // Burger menu
   const burger = document.getElementById('burger');
@@ -50,4 +63,12 @@ document.addEventListener('DOMContentLoaded', () => {
   document
     .querySelectorAll('.reveal, .fade-up, .slide-left, .fade-scale')
     .forEach(el => observer.observe(el));
-});
+}
+
+// Start initialization when DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  // DOM already loaded
+  initApp();
+}

@@ -1,15 +1,12 @@
-// Wait for both DOM and Swiper to be ready
+
 function initApp() {
   if (!window.Swiper) {
-    // Swiper not loaded yet, wait a bit more
     setTimeout(initApp, 50);
     return;
   }
 
-  // Initialize Swiper for each instance
   const swiperElements = document.querySelectorAll('.mySwiper');
   swiperElements.forEach(swiperEl => {
-    // Find navigation buttons within this swiper's parent container
     const nextBtn = swiperEl.parentElement?.querySelector('.swiper-button-next') || 
                      swiperEl.querySelector('.swiper-button-next');
     const prevBtn = swiperEl.parentElement?.querySelector('.swiper-button-prev') || 
@@ -56,13 +53,11 @@ function initApp() {
     closeBtn.addEventListener('click', closeMenu);
   }
 
-  // Close menu when clicking on any menu link
   const menuLinks = document.querySelectorAll('.nav-links a');
   menuLinks.forEach(link => {
     link.addEventListener('click', closeMenu);
   });
 
-  // Reveal animations
   const observer = new IntersectionObserver(
     entries => {
       entries.forEach(entry => {
@@ -79,22 +74,22 @@ function initApp() {
     .querySelectorAll('.reveal, .fade-up, .slide-left, .fade-scale')
     .forEach(el => observer.observe(el));
 
-  // Fade-in images on load
+
   document.querySelectorAll('.fade-img').forEach(img => {
     if (img.complete) {
-      // Image already loaded
+
       img.classList.add('loaded');
     } else {
-      // Wait for image to load
+
       img.onload = () => img.classList.add('loaded');
     }
   });
 }
 
-// Start initialization when DOM is ready
+
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initApp);
 } else {
-  // DOM already loaded
+
   initApp();
 }

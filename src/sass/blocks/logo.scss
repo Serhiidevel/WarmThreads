@@ -32,23 +32,23 @@
         gap: 36px;
         z-index: 3;
         li {
-            display: inline-block; // Make li only as wide as content
-            width: auto; // Remove full width
+            display: inline-block; 
+            width: auto; 
             a {
-                display: inline-flex; // Make link only as wide as content
+                display: inline-flex; 
                 align-items: center;
-                gap: 8px; // Space between img and text
+                gap: 8px;
                 padding-bottom: 10px;
                 color: $dark;
                 text-decoration: none;
                 font-size: 24px;
                 font-family: barlow;
                 font-weight: 400;
-                width: auto; // Remove full width
+                width: auto;
                 span {
-                    display: inline-block; // Make span inline
-                    width: auto; // Remove full width
-                    padding-left: 0; // Remove left padding
+                    display: inline-block;
+                    width: auto;
+                    padding-left: 0;
                 }
                 img {
                     display: inline-block;

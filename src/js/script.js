@@ -36,16 +36,31 @@ function initApp() {
   const navLinks = document.getElementById('nav-links');
   const closeBtn = document.getElementById('close-btn');
 
-  if (burger && navLinks && closeBtn) {
+  function closeMenu() {
+    if (navLinks) {
+      navLinks.classList.remove('active');
+    }
+    if (burger) {
+      burger.classList.remove('active');
+    }
+  }
+
+  if (burger && navLinks) {
     burger.addEventListener('click', () => {
       navLinks.classList.toggle('active');
       burger.classList.toggle('active');
     });
-    closeBtn.addEventListener('click', () => {
-      navLinks.classList.remove('active');
-      burger.classList.remove('active');
-    });
   }
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeMenu);
+  }
+
+  // Close menu when clicking on any menu link
+  const menuLinks = document.querySelectorAll('.nav-links a');
+  menuLinks.forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
 
   // Reveal animations
   const observer = new IntersectionObserver(

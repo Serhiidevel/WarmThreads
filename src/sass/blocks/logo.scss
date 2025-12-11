@@ -26,25 +26,36 @@
         width: 27px;
         height: 27px;
     }
-    .nav-links {
+      .nav-links {
         list-style: none;
         display: flex;
         gap: 36px;
         z-index: 3;
         li {
-            span {
-                width: 100%;
-                padding-left: 25px;
+            display: inline-block; // Make li only as wide as content
+            width: auto; // Remove full width
+            a {
+                display: inline-flex; // Make link only as wide as content
+                align-items: center;
+                gap: 8px; // Space between img and text
+                padding-bottom: 10px;
+                color: $dark;
+                text-decoration: none;
+                font-size: 24px;
+                font-family: barlow;
+                font-weight: 400;
+                width: auto; // Remove full width
+                span {
+                    display: inline-block; // Make span inline
+                    width: auto; // Remove full width
+                    padding-left: 0; // Remove left padding
+                }
+                img {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
             }
         }
-      }
-      .nav-links li a {
-        padding-top: 40px;
-        color: $dark;
-        text-decoration: none;
-        font-size: 24px;
-        font-family: barlow;
-        font-weight: 400;
       }
       .nav-links {
         position: fixed;
@@ -83,7 +94,6 @@
       .close-btn {
         position: absolute;
         top: 18px;
-        right: 298px;
         font-size: 28px;
         background: none;
         border: none;

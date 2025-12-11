@@ -322,17 +322,30 @@ h1 {
   gap: 36px;
   z-index: 3;
 }
-.logo .nav-links li span {
-  width: 100%;
-  padding-left: 25px;
+.logo .nav-links li {
+  display: inline-block;
+  width: auto;
 }
 .logo .nav-links li a {
-  padding-top: 40px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 10px;
   color: black;
   text-decoration: none;
   font-size: 24px;
   font-family: barlow;
   font-weight: 400;
+  width: auto;
+}
+.logo .nav-links li a span {
+  display: inline-block;
+  width: auto;
+  padding-left: 0;
+}
+.logo .nav-links li a img {
+  display: inline-block;
+  vertical-align: middle;
 }
 .logo .nav-links {
   position: fixed;
@@ -368,7 +381,6 @@ h1 {
 .logo .close-btn {
   position: absolute;
   top: 18px;
-  right: 298px;
   font-size: 28px;
   background: none;
   border: none;
@@ -1183,7 +1195,7 @@ h1 {
     height: 46px;
   }
   .contacts__descr {
-    max-width: 60px 86px 0 86px;
+    margin: 60px 86px 0 86px;
     font-size: 40px;
   }
   .contacts__service {

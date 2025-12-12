@@ -319,13 +319,8 @@ h1 {
   .to-top {
     width: 100px;
     height: 100px;
-    right: auto;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 32px;
-  }
-  .to-top span {
-    padding-top: 0;
+    font-size: 48px;
+    padding-bottom: 12px;
   }
 }
 .logo {

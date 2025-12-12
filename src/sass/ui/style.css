@@ -289,6 +289,45 @@ h1 {
     transform: none;
   }
 }
+.to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 25px;
+  width: 42px;
+  height: 42px;
+  background: #6A3E1D;
+  color: #E1DBDB;
+  font-size: 22px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.to-top.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+@media screen and (min-width: 1440px) {
+  .to-top {
+    width: 100px;
+    height: 100px;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 32px;
+  }
+  .to-top span {
+    padding-top: 0;
+  }
+}
 .logo {
   display: flex;
   justify-content: space-between;

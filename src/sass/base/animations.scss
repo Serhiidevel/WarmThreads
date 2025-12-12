@@ -1,3 +1,5 @@
+@use 'variables.scss' as *;
+
 @media screen and (min-width: 368px) {
   .reveal {
     opacity: 0;
@@ -217,4 +219,37 @@
 }
 }
 
+.to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 25px;
+  width: 42px;
+  height: 42px;
+  background: $brown; // тёмный цвет из сайта
+  color: $light-warm;
+  font-size: 22px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
 
+.to-top.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+@media screen and (min-width: 1440px) {
+  .to-top {
+    width: 100px;
+    height: 100px;
+    font-size: 48px;
+    padding-bottom: 12px;
+  }
+}

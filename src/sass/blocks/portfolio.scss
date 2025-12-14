@@ -6,9 +6,9 @@
     overflow: visible; // don't clip content
     width: 100%;
     &__sweaters-header , .portfolio__dresses-header {
-        font-weight: 300;
+        font-weight: 550;
         font-size: 24px;
-        font-family: "Itim", cursive;
+        font-family: barlow;
         text-transform: uppercase;
         text-align: center;
         color: $brown;
@@ -16,7 +16,7 @@
     &__sweaters-line, .portfolio__dresses-line{
         border: 1px solid $brown;
         margin: 7px auto 0 auto;
-        font-family: "Itim", cursive;
+        font-family: barlow;
         width: 340px;
         max-width: calc(100% - 20px); 
         height: 0px;
@@ -33,6 +33,7 @@
             height: auto;
         }
         .portfolio__descr {
+            font-family: barlow;
             display: flex;
             width: 100%;
             margin-top: 10px;
@@ -177,7 +178,6 @@
     .portfolio {
       &__sweaters-header , .portfolio__dresses-header {
         padding-left: 46px;
-        font-weight: 400;
         font-size: 36px;
         text-align: left;
       }

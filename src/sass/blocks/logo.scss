@@ -100,7 +100,9 @@
         color: $dark;
         cursor: pointer;
       }
-
+      &-cart {
+        display: none;
+      }
 }
 
 @media screen and (min-width: 768px) {
@@ -117,6 +119,10 @@
             width: 43px;
             height: 40px;
             margin-right: -165px;
+        }
+        &-cart {
+            width: 42px;
+            height: 40px;
         }
         .close-btn { 
             top: 11px;
@@ -161,6 +167,18 @@
         .close-btn {
               display: none;
             }
+        &-cart {
+            display: block;
+            position: absolute;
+            top: 12px;
+            right: 0px;
+            margin-right: 16px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            &:hover {
+                transform: scale(1.1);
+              }
+        }
     }
 }
 
@@ -177,5 +195,9 @@
             width: 471px;
             height: 71px;
         }
+        &-cart {
+            width: 68px;
+            height: 64px;
     }
+}
 }

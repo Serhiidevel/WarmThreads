@@ -421,6 +421,9 @@ h1 {
   color: black;
   cursor: pointer;
 }
+.logo-cart {
+  display: none;
+}
 
 @media screen and (min-width: 768px) {
   .logo__heart-icon {
@@ -435,6 +438,10 @@ h1 {
     width: 43px;
     height: 40px;
     margin-right: -165px;
+  }
+  .logo-cart {
+    width: 42px;
+    height: 40px;
   }
   .logo .close-btn {
     top: 11px;
@@ -476,6 +483,18 @@ h1 {
   .logo .close-btn {
     display: none;
   }
+  .logo-cart {
+    display: block;
+    position: absolute;
+    top: 12px;
+    right: 0px;
+    margin-right: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .logo-cart:hover {
+    transform: scale(1.1);
+  }
 }
 @media screen and (min-width: 1920px) {
   .logo {
@@ -489,6 +508,10 @@ h1 {
   .logo__title-img {
     width: 471px;
     height: 71px;
+  }
+  .logo-cart {
+    width: 68px;
+    height: 64px;
   }
 }
 .header {
@@ -558,7 +581,7 @@ h1 {
   padding: 0 16px;
 }
 .header__promo-title {
-  font-family: var(--font4);
+  font-family: barlow;
   font-weight: 400;
   font-size: 15px;
   line-height: 1.3;
@@ -579,6 +602,7 @@ h1 {
 }
 .header .btn_buy span {
   letter-spacing: 0.1em;
+  font-family: barlow;
 }
 .header .btn_buy .line {
   width: 84px;
@@ -754,7 +778,7 @@ h1 {
 }
 .about__discount-title {
   margin-top: 22px;
-  font-family: Libre Calson Text;
+  font-family: barlow;
   font-weight: 500;
   font-size: 14px;
   text-align: center;
@@ -762,7 +786,7 @@ h1 {
 }
 .about__discount-descr {
   margin-top: 15px;
-  font-family: Libre Calson Text;
+  font-family: barlow;
   font-weight: 500;
   font-size: 10px;
   text-align: center;
@@ -898,9 +922,9 @@ h1 {
   width: 100%;
 }
 .portfolio__sweaters-header, .portfolio .portfolio__dresses-header {
-  font-weight: 300;
+  font-weight: 550;
   font-size: 24px;
-  font-family: "Itim", cursive;
+  font-family: barlow;
   text-transform: uppercase;
   text-align: center;
   color: #6A3E1D;
@@ -908,7 +932,7 @@ h1 {
 .portfolio__sweaters-line, .portfolio .portfolio__dresses-line {
   border: 1px solid #6A3E1D;
   margin: 7px auto 0 auto;
-  font-family: "Itim", cursive;
+  font-family: barlow;
   width: 340px;
   max-width: calc(100% - 20px);
   height: 0px;
@@ -926,6 +950,7 @@ h1 {
   height: auto;
 }
 .portfolio .slide-inner .portfolio__descr {
+  font-family: barlow;
   display: flex;
   width: 100%;
   margin-top: 10px;
@@ -1050,7 +1075,6 @@ h1 {
 @media screen and (min-width: 1440px) {
   .portfolio__sweaters-header, .portfolio .portfolio__dresses-header {
     padding-left: 46px;
-    font-weight: 400;
     font-size: 36px;
     text-align: left;
   }
@@ -1177,7 +1201,7 @@ h1 {
 }
 .contacts__service-online {
   margin-top: 26px;
-  font-family: var(--font-family);
+  font-family: barlow;
   font-weight: 400;
   font-size: 10px;
   text-align: center;
@@ -1185,7 +1209,7 @@ h1 {
 }
 .contacts__service-number {
   margin-top: 21px;
-  font-family: var(--font-family);
+  font-family: barlow;
   font-weight: 400;
   font-size: 13px;
   text-align: center;

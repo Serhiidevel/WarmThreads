@@ -961,6 +961,23 @@ h1 {
   gap: 12px;
   background: #E1DBDB;
 }
+.portfolio .slide-inner .portfolio__btn {
+  font-family: barlow;
+  display: block;
+  margin: 8px auto;
+  margin-bottom: 23px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  width: 152px;
+  height: 43px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background: #6A3E1D;
+  font-weight: 400;
+  font-size: 17px;
+  text-align: center;
+  color: #FFFFFF;
+  cursor: pointer;
+}
 .portfolio__dresses__dresses-header {
   font-weight: 300;
   font-size: 24px;
@@ -1141,6 +1158,15 @@ h1 {
     white-space: nowrap;
     text-align: right;
     flex-shrink: 0;
+  }
+  .portfolio .mySwiper .swiper-slide .slide-inner .portfolio__btn {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease, visibility 0.6s ease;
+  }
+  .portfolio .mySwiper .swiper-slide:hover .slide-inner .portfolio__btn {
+    visibility: visible;
+    opacity: 1;
   }
   .portfolio .mySwiper .swiper-button-prev,
   .portfolio .mySwiper .swiper-button-next {

@@ -103,6 +103,12 @@
       &-cart {
         display: none;
       }
+      &-cart-wrapper {
+        display: none;
+      }
+      &-cart-badge {
+        display: none;
+      }
 }
 
 @media screen and (min-width: 768px) {
@@ -120,9 +126,34 @@
             height: 40px;
             margin-right: -165px;
         }
+        &-cart-wrapper {
+            display: block;
+            position: relative;
+        }
         &-cart {
             width: 42px;
             height: 40px;
+        }
+        &-cart-badge {
+            position: absolute;
+            top: -6px;
+            right: -6px;
+            background: $brown;
+            color: $white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-family: barlow;
+            z-index: 10;
+            &.active {
+                display: flex;
+                animation: cartBounce 0.5s ease;
+            }
         }
         .close-btn { 
             top: 11px;
@@ -167,17 +198,41 @@
         .close-btn {
               display: none;
             }
-        &-cart {
+        &-cart-wrapper {
             display: block;
             position: absolute;
             top: 12px;
             right: 0px;
             margin-right: 16px;
+        }
+        &-cart {
+            display: block;
             cursor: pointer;
             transition: transform 0.3s ease;
             &:hover {
                 transform: scale(1.1);
               }
+        }
+        &-cart-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: $brown;
+            color: $white;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: barlow;
+            z-index: 10;
+            &.active {
+                display: flex;
+                animation: cartBounce 0.5s ease;
+            }
         }
     }
 }
@@ -198,6 +253,13 @@
         &-cart {
             width: 68px;
             height: 64px;
-    }
+        }
+        &-cart-badge {
+            width: 32px;
+            height: 32px;
+            font-size: 18px;
+            top: -10px;
+            right: -10px;
+        }
 }
 }

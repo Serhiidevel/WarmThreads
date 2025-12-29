@@ -323,6 +323,58 @@ h1 {
     padding-bottom: 12px;
   }
 }
+@keyframes flyToCart {
+  0% {
+    transform: scale(1) translate(0, 0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(0.2) translate(var(--cart-x), var(--cart-y));
+    opacity: 0;
+  }
+}
+.cart-flying-item {
+  position: fixed;
+  pointer-events: none;
+  z-index: 10000;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  animation: flyToCart 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+.cart-flying-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes cartBounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+}
+@keyframes buttonClick {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.92);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.portfolio__btn.clicked {
+  animation: buttonClick 0.4s ease;
+}
+
 .logo {
   display: flex;
   justify-content: space-between;
@@ -424,6 +476,12 @@ h1 {
 .logo-cart {
   display: none;
 }
+.logo-cart-wrapper {
+  display: none;
+}
+.logo-cart-badge {
+  display: none;
+}
 
 @media screen and (min-width: 768px) {
   .logo__heart-icon {
@@ -439,9 +497,34 @@ h1 {
     height: 40px;
     margin-right: -165px;
   }
+  .logo-cart-wrapper {
+    display: block;
+    position: relative;
+  }
   .logo-cart {
     width: 42px;
     height: 40px;
+  }
+  .logo-cart-badge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: #6A3E1D;
+    color: #FFFFFF;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-family: barlow;
+    z-index: 10;
+  }
+  .logo-cart-badge.active {
+    display: flex;
+    animation: cartBounce 0.5s ease;
   }
   .logo .close-btn {
     top: 11px;
@@ -483,17 +566,41 @@ h1 {
   .logo .close-btn {
     display: none;
   }
-  .logo-cart {
+  .logo-cart-wrapper {
     display: block;
     position: absolute;
     top: 12px;
     right: 0px;
     margin-right: 16px;
+  }
+  .logo-cart {
+    display: block;
     cursor: pointer;
     transition: transform 0.3s ease;
   }
   .logo-cart:hover {
     transform: scale(1.1);
+  }
+  .logo-cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #6A3E1D;
+    color: #FFFFFF;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: barlow;
+    z-index: 10;
+  }
+  .logo-cart-badge.active {
+    display: flex;
+    animation: cartBounce 0.5s ease;
   }
 }
 @media screen and (min-width: 1920px) {
@@ -512,6 +619,13 @@ h1 {
   .logo-cart {
     width: 68px;
     height: 64px;
+  }
+  .logo-cart-badge {
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    top: -10px;
+    right: -10px;
   }
 }
 .header {
@@ -977,6 +1091,10 @@ h1 {
   text-align: center;
   color: #FFFFFF;
   cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.portfolio .slide-inner .portfolio__btn:active {
+  transform: scale(0.95);
 }
 .portfolio__dresses__dresses-header {
   font-weight: 300;

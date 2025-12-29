@@ -60,6 +60,10 @@
           text-align: center;
           color: $white;
           cursor: pointer;
+          transition: transform 0.2s ease;
+          &:active {
+            transform: scale(0.95);
+          }
         }
     }
     &__dresses {

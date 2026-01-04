@@ -32,7 +32,7 @@
           <li><a href="#about"><img src="./src/icon/burger/heart.svg" alt="heart"><span>About</span></a></li>
           <li><a href="#offers"><img src="./src/icon/burger/gift.svg" alt="gift"><span>Offers</span></a></li>
           <li><a href="#contacts"><img src="./src/icon/burger/call.svg" alt="call"><span>Find Us</span></a></li>
-          <li><a href=""><img src="./src/icon/burger/cart.svg" alt="cart"><span>Cart</span></a></li>
+          <li><a href="#" id="mobile-cart-link"><img src="./src/icon/burger/cart.svg" alt="cart"><span>Cart</span></a></li>
         </ul>
       </nav>
     </section>
@@ -287,7 +287,21 @@
     
     <button class="to-top" id="toTopBtn"><span>↑</span></button>
 
-  
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-modal__overlay"></div>
+        <div class="cart-modal__content">
+            <div class="cart-modal__header">
+                <h2 class="cart-modal__title">Your Cart</h2>
+                <button class="cart-modal__close" id="cart-close">✕</button>
+            </div>
+            <div class="cart-modal__body" id="cart-items">
+                <div class="cart-empty" id="cart-empty">
+                    <p>Your cart is empty</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>

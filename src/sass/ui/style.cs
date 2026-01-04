@@ -1660,6 +1660,39 @@ h1 {
   padding: 20px;
 }
 
+@media screen and (max-width: 767px) {
+  .cart-modal__content {
+    max-width: 100%;
+    width: 100%;
+  }
+  .cart-modal__header {
+    padding: 16px;
+  }
+  .cart-modal__title {
+    font-size: 20px;
+  }
+  .cart-modal__body {
+    padding: 16px;
+  }
+  .cart-item {
+    padding: 12px;
+    gap: 12px;
+  }
+  .cart-item__image {
+    width: 70px;
+    height: 70px;
+  }
+  .cart-item__name {
+    font-size: 14px;
+  }
+  .cart-item__price {
+    font-size: 12px;
+  }
+  .cart-empty {
+    padding: 40px 20px;
+    font-size: 16px;
+  }
+}
 .cart-empty {
   text-align: center;
   padding: 40px 20px;
@@ -1754,4 +1787,4 @@ h1 {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.cs.map */

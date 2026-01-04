@@ -2,7 +2,7 @@
 
 
 .btn_buy {
-    all: unset; /* Полностью сбрасывает все базовые стили */
+    all: unset; 
     cursor: pointer;
     text-transform: uppercase;
     padding-top: 27px;
@@ -40,6 +40,5 @@ h1 {
     .about__pack-badge {
         width: 217px;
         height: 178px;
-    }
+    } 
 }
-

@@ -120,6 +120,7 @@ let cartCount = 0;
 
 function updateCartBadge() {
   const cartBadge = document.getElementById('cart-badge');
+  const mobileCartLink = document.getElementById('mobile-cart-link');
   if (cartBadge) {
     if (cartCount > 0) {
       cartBadge.textContent = cartCount;
@@ -127,6 +128,9 @@ function updateCartBadge() {
     } else {
       cartBadge.classList.remove('active');
     }
+  }
+  if (mobileCartLink) {
+    mobileCartLink.classList.toggle('has-items', cartCount > 0);
   }
 }
 

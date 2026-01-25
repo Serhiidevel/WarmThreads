@@ -9,6 +9,7 @@
 html {
     scroll-behavior: smooth;
     width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -18,6 +19,7 @@ body {
     font-family: 'Judson', serif;  // для текста
     background-color: $light-warm; // match section background to prevent white lines
     min-width: 0; // allow body to shrink below content size if needed
+    overflow-x: hidden;
   }
 
 section {

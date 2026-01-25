@@ -8,6 +8,7 @@
 html {
   scroll-behavior: smooth;
   width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -17,6 +18,7 @@ body {
   font-family: "Judson", serif;
   background-color: #E1DBDB;
   min-width: 0;
+  overflow-x: hidden;
 }
 
 section {
@@ -394,28 +396,48 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   border: none;
   border-bottom: 1px solid black;
   width: 100%;
   height: 68px;
   background: black;
   margin: 0;
-  padding: 0;
+  padding: 0 10px;
   box-sizing: border-box;
 }
+.logo nav {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
 .logo__heart-icon {
-  margin-left: 16px;
+  margin-left: 0;
   margin-bottom: 4px;
   width: 27px;
   height: 27px;
   cursor: pointer;
   display: block;
+  flex-shrink: 0;
+}
+.logo__title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+}
+.logo__title-img {
+  display: block;
 }
 .logo__burger-icon {
-  margin-right: -16px;
+  margin-left: auto;
+  margin-right: 10px;
   margin-bottom: 4px;
   width: 27px;
   height: 27px;
+  flex-shrink: 0;
 }
 .logo .nav-links {
   list-style: none;
@@ -456,7 +478,7 @@ h1 {
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  transform: translateX(100%);
+  transform: translateX(calc(100% + 4px));
   border-bottom: 2px solid black;
   border-top: 2px solid black;
   transition: transform 0.4s ease-in-out;
@@ -488,6 +510,20 @@ h1 {
   color: black;
   cursor: pointer;
 }
+.logo #mobile-cart-link {
+  position: relative;
+}
+.logo #mobile-cart-link.has-items::after {
+  content: "";
+  position: absolute;
+  left: 22px;
+  top: -2px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #e53935;
+  z-index: 1;
+}
 .logo-cart {
   display: none;
 }
@@ -498,6 +534,14 @@ h1 {
   display: none;
 }
 
+@media screen and (max-width: 1439px) {
+  .logo {
+    padding-right: 0;
+  }
+  .logo-cart-badge.active {
+    display: none !important;
+  }
+}
 @media screen and (min-width: 768px) {
   .logo__heart-icon {
     width: 42px;
@@ -510,36 +554,15 @@ h1 {
   .logo__burger-icon {
     width: 43px;
     height: 40px;
-    margin-right: -165px;
   }
   .logo-cart-wrapper {
     display: block;
     position: relative;
+    flex-shrink: 0;
   }
   .logo-cart {
     width: 42px;
     height: 40px;
-  }
-  .logo-cart-badge {
-    position: absolute;
-    top: -6px;
-    right: -6px;
-    background: #6A3E1D;
-    color: #FFFFFF;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    font-size: 12px;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    font-weight: 600;
-    font-family: barlow;
-    z-index: 10;
-  }
-  .logo-cart-badge.active {
-    display: flex;
-    animation: cartBounce 0.5s ease;
   }
   .logo .close-btn {
     top: 11px;
@@ -558,22 +581,35 @@ h1 {
   .logo .nav-links span {
     font-size: 27px;
   }
+  .logo .nav-links #mobile-cart-link.has-items::after {
+    left: 34px;
+    width: 12px;
+    height: 12px;
+  }
 }
 @media screen and (min-width: 1440px) {
   .logo {
     display: block;
     position: relative;
+    padding: 0 10px;
   }
   .logo__heart-icon {
     position: absolute;
+    left: 10px;
     top: 12px;
     transition: transform 0.3s ease;
   }
   .logo__heart-icon:hover {
     transform: scale(1.1);
   }
+  .logo__title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
   .logo__title-img {
-    margin-top: 9px;
+    margin-top: 0;
   }
   .logo__burger-icon {
     display: none;
@@ -585,8 +621,7 @@ h1 {
     display: block;
     position: absolute;
     top: 12px;
-    right: 0px;
-    margin-right: 16px;
+    right: 10px;
   }
   .logo-cart {
     display: block;
@@ -623,7 +658,7 @@ h1 {
     height: 98px;
   }
   .logo__heart-icon {
-    margin-left: 50px;
+    left: 10px;
     width: 68px;
     height: 64px;
   }
@@ -1490,6 +1525,9 @@ h1 {
 }
 
 @media screen and (min-width: 768px) {
+  .footer {
+    overflow-x: hidden;
+  }
   .footer__title {
     position: relative;
   }
@@ -1660,7 +1698,7 @@ h1 {
   padding: 20px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .cart-modal__content {
     max-width: 100%;
     width: 100%;
